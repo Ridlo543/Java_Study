@@ -1,26 +1,43 @@
-import java.util.*;
 import java.util.Scanner;
 
 public class pola3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int count = scanner.nextInt();
 
-        int space = n - 3;
+        if (count % 2 == 0) {
+            count--;
+        }
+        int center = (count - 1) / 2;
 
-        for (int i = 0; i < n; i++) {
-
-            for (int j = 0; j < space; j++)
-                System.out.print(" ");
-
-            for (int j = 0; j <= i; j++)
+        // top
+        for (int a = 0; a < center; a++) {
+            for (int b = center; b > a; b--) {
+                System.out.print("  ");
+            }
+            for (int b = 0; b < (2 * a) + 1; b++) {
                 System.out.print("* ");
-
-            System.out.print("\n");
-            space--;
+            }
+            System.out.println();
         }
 
+        // center
+        for (int a = 0; a < count; a++) {
+            System.out.print("* ");
+        }
+        System.out.println();
+
+        // bottom
+        for (int a = 0; a < center; a++) {
+            for (int b = 0; b < a + 1; b++) {
+                System.out.print("  ");
+            }
+            for (int b = 0; b < count - (2 * (a + 1)); b++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
 
     }
 }
