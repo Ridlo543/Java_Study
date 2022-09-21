@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class pola4 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int count = scanner.nextInt();
+
         if (count % 2 == 0) {
             count--;
         }
