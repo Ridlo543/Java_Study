@@ -24,7 +24,7 @@ public class pola2
                     if (b == 0 || b == center || b == (count - 1)) {
                         System.out.print("* ");
                     } else {
-                        System.out.print("  ");;
+                        System.out.print("  ");
                     }
                 }
             }
@@ -33,27 +33,10 @@ public class pola2
 
         // center
         for (int a = 0; a < count; a++) {
-            System.out.print("  ");
+            System.out.print("* ");
         }
         System.out.println();
 
-        // bottom
-        for (int a = 0; a < center; a++) {
-            if (a == (center - 1)) {
-                for (int b = 0; b < count; b++) {
-                    System.out.print("  ");
-                }
-            } else {
-                for (int b = 0; b < count; b++) {
-                    if (b == 0 || b == center || b == (count - 1)) {
-                        System.out.print("* ");
-                    } else {
-                        System.out.print("  ");
-                    }
-                }
-            }
-            System.out.println();
-        }
         // bottom
         for (int a = 0; a < center; a++) {
             if (a == (center - 1)) {
